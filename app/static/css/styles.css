@@ -91,7 +91,7 @@ nav ul li a {
     padding: 20px;
     height: 1em;
     width: auto; */
-    border-radius: 100%;
+    border-radius: 5%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -103,6 +103,7 @@ nav ul li a {
     text-align: center;
     img{
         height: 10em;
+        border: none;
     }
     /* height: 3em;
     width: 3em; */
@@ -126,4 +127,31 @@ footer {
     border-radius: 5em;
     background-color: skyblue;
     cursor: pointer;
+}
+
+.card img {
+    border-radius: 5%;
+}
+
+.login input{
+    background: none;
+    background-color: skyblue;
+    border: none;
+    border-radius: 3em;
+}
+
+.login button{
+    background: none;
+    background-color: #eaecee;
+    border: none;
+    border-radius: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.login{
+    background-color: #d4e6f1;
+    border-radius: 2em;
+    text-align: center;
+    height: 6em;
+    
 }
