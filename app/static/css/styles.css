@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 3em;
+   img{
+    width: 2.6em;
+    border-radius: 50%;
+   }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    padding: 10px;
+    list-style: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.carousel {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-image: url(https://scontent.fasu6-1.fna.fbcdn.net/v/t39.30808-6/339554294_260276033023096_2426570640008373430_n.jpg?stp=dst-jpg_s417x417_tt6&_nc_cat=104&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGhJxDkuXU7gFAJgotrKG-4l7x3q6Cs3x2XvHeroKzfHSVUREatB_fyTp8c6mWcNXEhNZFtOMMqiC6He_nwBsdq&_nc_ohc=vevkmLKHZccQ7kNvgGAB7wN&_nc_oc=AdlRT-NMBnEhW7CQAuYkHyOcy_AGtt9wbMEkfw3qSIz51l2BOSLmu03VktxEobhLvkM&_nc_zt=23&_nc_ht=scontent.fasu6-1.fna&_nc_gid=22XGI03LhyCWQM3jX1uX-g&oh=00_AYEFDDxkj_mPtQCjqFur_0cJIseREm8zPAT67uefxsrTgQ&oe=67E260A3);
+}
+
+.carousel-item-1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-image: url(https://scontent.fasu6-2.fna.fbcdn.net/v/t39.30808-6/483608679_582491498139496_8162215016636639449_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGLSyw3Gewu5JM6meJONSOf4Cqbzny1nQXgKpvOfLWdBcray6O-YClD5e5Kozag6OyOEihMZkhJlbYUFt0KNw7b&_nc_ohc=rqW2fUELw08Q7kNvgHDljJM&_nc_oc=AdnoV1DW0ARKiBxezSwjGZvsAUR39rXFow47TJqvsfLxHV-JOoTRofY8mWKjzdS4A3s&_nc_zt=23&_nc_ht=scontent.fasu6-2.fna&_nc_gid=WrNAMSUnvaFQ6IR2VCgJ6Q&oh=00_AYHZ9bFFJ8RaRaw6l-1JNfQyLHeINFlYn_olblL7u2j_9w&oe=67E4A7C7);
+}
+
+.carousel-item.active {
+    opacity: 1;
+    background-image: url(https://scontent.fasu6-2.fna.fbcdn.net/v/t39.30808-6/472971473_534630649592248_1563584064054077562_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=d3-wper3cGkQ7kNvgHEbEOX&_nc_oc=Adk6MbCAszyIm7BQYL_b7C1JSZDNoOK3o5LHBehCq8Xt0C08QkYrdIQGlrWgmwZLh8o&_nc_zt=23&_nc_ht=scontent.fasu6-2.fna&_nc_gid=9wmf2LeZvOdBIVNg2txIYA&oh=00_AYFUPWbGvoD7FDY6_l0xrJ1Wds_Ot2KkZ4pG1ikPTXdWxg&oe=67E2333D);
+   
+}
+
+.cards {
+    /* display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    height: 1em;
+    width: auto; */
+    border-radius: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    img{
+        height: 10em;
+    }
+    /* height: 3em;
+    width: 3em; */
+}
+
+.img-fluid{
+    width: 100%;
+    max-width: 320px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+
+}
+
+.join-btn{
+    border-radius: 5em;
+    background-color: skyblue;
+    cursor: pointer;
+}
