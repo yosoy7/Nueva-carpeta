@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro DUA</title>
+    <link rel="stylesheet" href="./../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro DUA</h1>
+        <form method="POST" action="{{ url_for('register') }}" onsubmit="return validatePassword()">
+            <div class="form-group">
+                <input type="text" name="username" placeholder="Usuario" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" id="password" placeholder="Contraseña" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirmar Contraseña" required>
+            </div>
+            <div id="password-error" class="error-message"></div>
+            <button type="submit" class="button">Registrarse</button>
+        </form>
+        <a href="{{ url_for('index') }}" class="back-link">Volver</a>
+    </div>
+
+    <script>
+        function validatePassword() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+            const errorElement = document.getElementById('password-error');
+
+            if (password !== confirmPassword) {
+                errorElement.textContent = 'Las contraseñas no coinciden';
+                return false;
+            }
+
+            if (password.length < 6) {
+                errorElement.textContent = 'La contraseña debe tener al menos 6 caracteres';
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
